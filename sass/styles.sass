@@ -1,0 +1,305 @@
+@use 'variaveis'
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-color: variaveis.$preto
+    padding: 50px 50px
+    
+.img
+    width: 100%
+
+/*Navbar*/
+.navbar
+    display: flex
+    justify-content: space-between
+
+.navbar button
+    border: 1px solid #ffff
+    background-color: variaveis.$preto
+    width: 150px
+    height: 32px
+
+.navbar h2
+    font-family: 'Crimson Pro'
+    font-style: normal
+    font-weight: 200
+    font-size: 14px
+    line-height: 16px
+    text-transform: uppercase
+    color: #fff
+
+/*Menu Hamburger*/
+.hamburger
+    cursor: pointer
+    display: none
+
+.bar
+    display: block
+    width: 28.5px
+    height: 3px
+    margin: 5px auto
+    -webkit-transition: all 0.3s ease-in-out
+    background-color: #fff
+
+h2
+    font-size: 14px
+    font-style: normal
+    font-weight: 200
+    line-height: 16px
+    text-transform: uppercase
+    color: #fff
+
+.nav-menu
+    display: flex
+    color: #fff
+    text-decoration: none
+
+.nav-menu li
+    padding: 0 30px
+    font-family: 'Montserrat'
+    list-style-type: none
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    color: #fff
+    justify-content: space-around
+
+.nav-menu li:hover
+    color: #70A5F4
+
+.active
+    border-bottom: 2px solid #fff
+
+.active:hover
+    color: #70A5F4
+
+.nav-item
+    cursor: pointer
+    justify-content: space-around
+
+/*Container*/
+.container
+    display: flex
+    flex-wrap: wrap
+    margin-top: 100px
+    justify-content: space-between
+
+.read-more
+    margin-top: 40px
+
+.read-more span
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    line-height: 22px
+    color: #fff
+
+/*Lado esquerdo - Left Side*/
+.lado-esquerdo h1
+    font-family: 'Lora'
+    font-style: normal
+    font-weight: 500
+    font-size: 48px
+    line-height: 61px
+    color: #fff
+
+.lado-esquerdo i
+    width: 38.79px
+    padding-left: 5px
+    color: #fff
+    margin-bottom: 20px
+
+.lado-esquerdo p
+    margin-top: 40px
+    width: 410px
+    height: 145px
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 29px
+    color: #fff
+
+.lado-esquerdo span
+    color: #fff
+
+/*Lado direito - right side*/
+.quadrado
+    background-color: variaveis.$preto
+    width: 410px
+    height: 189px
+    margin-left: 180px
+    margin-top: -100px
+    z-index: 1
+    position: absolute
+  
+.textos 
+    display: flex
+
+.img-texto
+    padding: 20px 20px
+    display: block
+
+.txts
+    margin-left: 10px
+    
+.txts h3
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 37px
+    color: #fff
+
+.txts h4
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: variaveis.$cinza-claro
+
+.img-texto h2
+    margin-top: 10px
+    font-family: 'Lora'
+    font-style: normal
+    font-weight: 700
+    font-size: 24px
+    line-height: 31px
+    color: #fff
+    
+.img-texto img
+    width: 85px
+    height: 72px
+    border-radius: 50px
+
+/*footer*/
+.footer
+    margin-top: 100px
+    text-align: center
+
+.footer p
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: variaveis.$cinza
+
+/*Responsive*/
+@media screen and (max-width: 768px)
+
+    .hamburger
+        display: block
+
+    .hamburger.active .bar:nth-child(2)
+        opacity: 0
+
+    .hamburger.active .bar:nth-child(1)
+        transform: translateY(8px) rotate(45deg)
+
+    .hamburger.active .bar:nth-child(3)
+        transform: translateY(-8px) rotate(-45deg)
+
+    .nav-menu
+        height: 100vh
+        position: fixed
+        left: -100%
+        top: 0
+        right: 0
+        z-inder: 40
+        gap: 0
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: variaveis.$preto
+        width: 98%
+        height: 100%
+        text-align: center
+        transition: 0.3s
+    
+    .nav-item
+        margin: 26px 0
+   
+    .nav-menu.active
+        left: 0
+
+    .active
+        line-height: 50px
+
+    /*Lado esquerdo*/
+    .lado-esquerdo h1
+        font-size: 36px
+
+    .lado-esquerdo p
+        font-size: 14px
+        width: 250px
+
+    .lado-esquerdo span
+        font-size: 14px
+
+    //quadrado
+    .txts h3
+        font-size: 12px
+
+    .txts h4
+        font-size: 10px
+        
+    .img-texto h2
+        font-size: 18px
+
+    .img-texto img
+        width: 62px
+        height: 52px
+
+    /*lado direito - right side*/
+    .quadrado
+        width: 230px
+        height: 138px
+        margin-left: 50px
+
+/*Landscape*/
+@media screen and (max-width: 968px)
+    
+    .hamburger
+        display: block
+    
+    .hamburger.active .bar:nth-child(2)
+        opacity: 0
+
+    .hamburger.active .bar:nth-child(1)
+        transform: translateY(8px) rotate(45deg)
+
+    .hamburger.active .bar:nth-child(3)
+        transform: translateY(-8px) rotate(-45deg)
+
+    .nav-menu
+        height: 100vh
+        position: fixed
+        left: -100%
+        top: 0
+        right: 0
+        z-inder: 40
+        gap: 0
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: variaveis.$preto
+        width: 98%
+        height: 100%
+        text-align: center
+        transition: 0.3s
+    
+    .nav-item
+        margin: 26px 0
+   
+    .nav-menu.active
+        left: 0
+
+    .active
+        line-height: 50px
